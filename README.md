@@ -1,4 +1,4 @@
-# MTT CoHack Challenge: Azure Arc
+# MTT CoHack Challenge: Managing an on-prem datacenter from the cloud using Azure Arc
 
 ## Introduction
 
