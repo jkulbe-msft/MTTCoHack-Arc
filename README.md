@@ -52,7 +52,7 @@ This hack will help you learn how to:
 
 - Enable Insights for all Arc-enabled servers using the available Log Analytics workspace, icluding process data and network connections
 - Create an Azure Policy that enforces a tag on all Arc-enabled servers
-- Add an extension to SRV1 that enables SSH connections
+- Add an extension to SRV1 that enables SSH connections, test the connection
 - Use Azure Update Manager to manage updates on all Arc-enabled servers
   - check for missing updates
   - schedule updates
