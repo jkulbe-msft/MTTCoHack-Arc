@@ -1,4 +1,4 @@
-# MTT CoHack Challenge : Azure Arc
+# MTT CoHack Challenge: Azure Arc
 
 ## Introduction
 
