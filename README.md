@@ -36,14 +36,15 @@ This hack will help you learn how to:
 ### Challenge 1: Onboard on-prem servers to Azure Arc
 
 - Connect to HVHOST and power on your data center servers
-- Onboard SRV1 to Azure Arc from the Windows GUI using an interactive tool or script
-- Onboard DC1 to Azure Arc from the Windows GUI using a script that does not prompt for user input
-- Onboard the LIN1 server to Azure Arc using the Azure CLI
+- Onboard SRV1 to Azure Arc from the Windows GUI using the built-in Azure Arc client
+- Onboard DC1 to Azure Arc from the Windows GUI using an interactive script
+- Onboard the LIN1 server to Azure Arc using a non-interactive script
 
 #### Resources
 
 - [Azure Arc Overview](https://learn.microsoft.com/en-us/azure/azure-arc/overview)
 - [Onboarding servers](https://learn.microsoft.com/en-us/azure/azure-arc/servers/overview)
+- [Connect Windows Server machines to Azure through Azure Arc Setup](https://learn.microsoft.com/en-us/azure/azure-arc/servers/onboard-windows-server)
 - Supported regions for [Arc-enabled SQL Servers](https://learn.microsoft.com/en-us/sql/sql-server/azure-arc/prerequisites?view=sql-server-ver16&tabs=azure#supported-regions)
 - Deploy a sandbox showcasing all Arc features and explore Azure Stack HCI [ArcBox/HCIBox](https://learn.microsoft.com)
 - Arc SQL Dashboard on [Github](sql-server-samples/samples/features/azure-arc/dashboard/README.md)
