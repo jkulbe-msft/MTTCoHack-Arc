@@ -8,12 +8,13 @@ Your challenge is to deploy Azure Arc and onboard servers in an on-premises data
 
 ## Requirements
 
-- Your coaches will give you login details to an Azure VM HVHOST, running a Hyper V environment with a simulated on-premises datacenter
-  - DC1: Domain Controller running Windows Server 2022 without GUI
-  - SRV1: Windows Server 2022 with SQL Server 2022
-  - LIN1: Ubuntu Linux 24.04
-- Your coaches will also give you login details to an Azure subscription with a resource group called rg-cohackArc. Please create all resources in this resource group.
+- Your coaches will give you login details to an Azure VM **HVHOST**, running a Hyper V environment with a simulated on-premises datacenter
+  - **DC1**: Domain Controller running Windows Server 2022 without GUI
+  - **SRV1**: Windows Server 2022 with SQL Server 2022
+  - **LIN1**: Ubuntu Linux 24.04
+- Your coaches will also give you login details to an Azure subscription with a resource group called **rg-cohackArc**. Please create all resources in this resource group.
 - The resource group rg-cohackArc contains a log analytics workspace called log-analytics-\<xxxxx>. Please use this workspace for any tasks that require monitoring.
+- Do **not** onboard the HVHOST machine to Azure Arc
 
 ![image](./images/hvhost.png)
 
@@ -37,8 +38,8 @@ This hack will help you learn how to:
 
 - Connect to HVHOST and power on your data center servers
 - Onboard SRV1 to Azure Arc from the Windows GUI using the built-in Azure Arc client
-- Onboard DC1 to Azure Arc from the Windows GUI using an interactive script
-- Onboard the LIN1 server to Azure Arc using a non-interactive script
+- Onboard DC1 to Azure Arc from the Windows GUI using an interactive script. *Hint: if copying to the console gives you trouble, use Notepad on SRV and save the file locally*
+- Onboard the LIN1 server to Azure Arc using a non-interactive script. *Hint: git clone this repo on LIN1 and edit the Onboarding script in the "files" folder.*
 
 #### Resources
 
