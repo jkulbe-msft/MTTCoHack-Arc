@@ -37,9 +37,9 @@ This hack will help you learn how to:
 ### Challenge 1: Onboard on-prem servers to Azure Arc
 
 - Connect to HVHOST and power on your data center servers
-- Onboard SRV1 to Azure Arc from the Windows GUI using the built-in Azure Arc client
-- Onboard DC1 to Azure Arc from the Windows GUI using an interactive script. *Hint: if copying to the console gives you trouble, use Notepad on SRV and save the file locally*
-- Onboard the LIN1 server to Azure Arc using a non-interactive script. *Hint: git clone this repo on LIN1 and edit the Onboarding script in the "files" folder.*
+- Onboard SRV1 to Azure Arc from the Windows GUI using the built-in Azure Arc client, ensure Arc covers both Windows and SQL Server
+- Onboard DC1 to Azure Arc from the Windows GUI using an interactive script. *Hint: if copying to the console gives you trouble, use Notepad on DC1 and save the file locally*
+- Onboard the LIN1 server to Azure Arc using a non-interactive script.
 
 #### Resources
 
@@ -52,9 +52,9 @@ This hack will help you learn how to:
 
 ### Challenge 2: Manage and govern your on-prem resources at scale
 
-- Enable Insights for all Arc-enabled servers using the available Log Analytics workspace, icluding process data and network connections
-- Create an Azure Policy that enforces a tag on all Arc-enabled servers
-- Add an extension to SRV1 that enables SSH connections, test the connection
+- Enable Insights for all Arc-enabled servers using the available Log Analytics workspace, including process data and network connections
+- Check SRV1 has the Arc extension for SQL Server installed. If not, add it with "LicenseOnly".
+- Create an Azure Policy that configures periodidic checking for missing system updates on Arc-enabled servers in the resource group, including already existing resources
 - Use Azure Update Manager to manage updates on all Arc-enabled servers
   - check for missing updates
   - schedule updates
@@ -62,14 +62,15 @@ This hack will help you learn how to:
 #### Resources
 
 - [Azure Policy for Arc-enabled servers](https://learn.microsoft.com/en-us/azure/azure-arc/servers/policy-reference)
+- [Connect your SQL Server to Azure Arc on a server already enabled by Azure Arc](https://learn.microsoft.com/en-us/sql/sql-server/azure-arc/connect-already-enabled?view=sql-server-ver16&tabs=azure)
 - [Azure Update Manager](https://learn.microsoft.com/en-us/azure/update-manager/overview)
-- [SSH access to Azure Arc-enabled servers](https://learn.microsoft.com/en-us/azure/azure-arc/servers/ssh-arc-overview?tabs=azure-powershell)
+
 
 
 ### Challenge 3: Use Defender for Cloud to get recommendations for your on-prem servers
 
-- Enable Defender for Cloud on all Arc-enabled servers
-- review recommendations for your servers later
+- Enable Defender for Cloud on all Arc-enabled servers if not onboarded yet
+- review recommendations for your servers
 
 #### Resources
 
@@ -77,9 +78,8 @@ This hack will help you learn how to:
 
 ### Challenge 4: manage your SQL Server using Azure Arc from the Azure portal
 
-- switch SRV1 SQL authentication to Entra ID
 - change SRV1 licensing to pay-as-you-go
-- run a SQL migration assessment
+- enable Entra ID login to SRV1 SQL Server
 - run a SQL best practices assessment
 
 #### Resources
